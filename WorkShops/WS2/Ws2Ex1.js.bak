@@ -1,0 +1,17 @@
+// reading module
+var fs = require("fs");
+
+// start reading file - an error might happen
+try{
+
+// read file content to a variable
+var data = fs.readFileSync("firstFile.txt");
+
+// print out content of the file
+console.log("Read from the file:");
+console.log(data.toString());
+
+// catch error when it occurs
+} catch (err){
+  console.log("Error: "+err);
+}
